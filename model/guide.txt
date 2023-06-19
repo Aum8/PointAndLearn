@@ -1,0 +1,11 @@
+Dependencies:
+tflite package
+
+To load model:
+
+Future loadModel() async {
+  Tflite.close();
+  await Tflite.loadModel(
+      model: "assets/ssd_mobilenet.tflite",
+      labels: "assets/ssd_mobilenet.txt");
+}
