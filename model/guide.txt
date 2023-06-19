@@ -1,4 +1,5 @@
 Dependencies:
+camera package
 tflite package
 
 To load model:
@@ -8,4 +9,25 @@ Future loadModel() async {
   await Tflite.loadModel(
       model: "assets/ssd_mobilenet.tflite",
       labels: "assets/ssd_mobilenet.txt");
+}
+
+
+To run model:
+
+runModel() async {
+  recognitionsList = await Tflite.detectObjectOnFrame(
+    bytesList: cameraImage.planes.map((plane) {
+      return plane.bytes;
+    }).toList(),
+    imageHeight: cameraImage.height,
+    imageWidth: cameraImage.width,
+    imageMean: 127.5,
+    imageStd: 127.5,
+    numResultsPerClass: 1,
+    threshold: 0.4,
+  );
+
+  setState(() {
+    cameraImage;
+  });
 }
