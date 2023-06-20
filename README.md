@@ -5,6 +5,6 @@ This is a Flutter mobile application designed to teach kids the names of common 
 
 # Features
 
-*Real-time object recognition: The app uses the device's camera to capture live video and performs object recognition in real-time.
-*Object naming: When an object is recognized, the app displays the name of the object on the screen, helping kids learn the names of various objects.
-*Interactive user interface: The app features a user-friendly and engaging interface designed specifically for kids.
+* Real-time object recognition: The app uses the device's camera to capture live video and performs object recognition in real-time.
+* Object naming: When an object is recognized, the app displays the name of the object on the screen, helping kids learn the names of various objects.
+* Interactive user interface: The app features a user-friendly and engaging interface designed specifically for kids.
